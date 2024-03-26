@@ -10,7 +10,6 @@
 
 - What is JSX
 - create table using JSX
-- render
 - Print Array and Object using map, filter, reduce method in JSX
 - Toggle Login Page - Home page using AND,OR and ternary operator
 - Try to print all DataType of JavaScript
