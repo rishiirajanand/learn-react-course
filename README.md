@@ -26,3 +26,13 @@
 - How to Handle Events
 - How to get Data from `input` field using `ref`
 - Create Score mini project
+
+## Day-4
+
+- Creating React using `webpack` and `vite` moduler
+- Understand folder and files structure
+- Diffrence b/w `webpack` and `vite`
+
+## Day-5
+
+- Starting new project `Movie App`
