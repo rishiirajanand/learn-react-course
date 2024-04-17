@@ -26,6 +26,7 @@
 - How to Handle Events
 - How to get Data from `input` field using `ref`
 - Create Score mini project
+- Create 4 project. Repo [Link](https://github.com/rishiirajanand/Small-Project-ReactJsCND)
 
 ## Day-4
 
