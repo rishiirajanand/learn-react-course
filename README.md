@@ -29,7 +29,7 @@
 - Create 4 project. Repo [Link](https://github.com/rishiirajanand/Small-Project-ReactJsCND)
 
 ## Day-4
-
+      Bye Bye CND
 - Creating React using `webpack` and `vite` moduler
 - Understand folder and files structure
 - Diffrence b/w `webpack` and `vite`
