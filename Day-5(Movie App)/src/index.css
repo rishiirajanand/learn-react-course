@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +19,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+/******** Navbar ***********/
+
+nav{
+    background-color: #ff006e;
+    padding: 20px;
+}
+nav p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+
+
+/********* Movie Card ***********/
 .dark{
     color: black;
 }
@@ -21,8 +43,7 @@
 }
 .main{
     width: 60%;
-    margin: auto;
-    /* border: 2px solid red; */
+    margin: 4rem auto;
 }
 
 .movie_card{
@@ -38,7 +59,7 @@
 .left_section img{
     position: relative;
     top: 4px;
-    width: 200px;
+    width: 150px;
     height: auto;
 }
 .right_section{
@@ -76,6 +97,17 @@
     background-color: #fff;
     color: black;
 }
+.unfav_btn{
+    margin-right: 0.5rem;
+    background-color: red;
+    color: #fff;
+    transition: all 600ms;
+}
+.unfav_btn:hover{
+    border-color: red;
+    background-color: #fff;
+    color: black;
+}
 .buy_btn{
     background-color: blue;
     color: #fff;
@@ -87,3 +119,10 @@
     background-color: #fff;
 }
 
+.stars{
+    width: 18px;
+}
+.star_btn{
+    width: 8px;
+    margin:0 5px;
+}
