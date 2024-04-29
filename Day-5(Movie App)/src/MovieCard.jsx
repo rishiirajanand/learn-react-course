@@ -8,7 +8,6 @@ export default class MovieCard extends React.Component{
         const {movieProps, addStar, decStar, toggleFav, toggleCard} = this.props;
         // Extracting state object
         const {title,plot,price,rating, star, favorite, isInCard, imgURL} = movieProps;
-        console.log(imgURL);
         return (
             <>
                 <div className='main'>
