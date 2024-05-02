@@ -39,7 +39,7 @@ export default class Navbar extends Component{
                 <Cart>
                     <CardImg src="https://cdn-icons-png.flaticon.com/128/4290/4290854.png" alt="cart" />
                     
-                    <CounterSpan color="yellow" show={"ture"}>{movieCount}</CounterSpan>
+                    <CounterSpan color="yellow" show={true}>{movieCount}</CounterSpan>
                 </Cart>
             </Nav>
             </>

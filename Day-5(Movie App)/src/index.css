@@ -56,7 +56,6 @@ nav p{
 .left_section{
     /* border: 2px solid red; */
     display: inline-block;
-    visibility: hidden;
 }
 .left_section img{
     position: relative;

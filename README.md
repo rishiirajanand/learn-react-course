@@ -37,3 +37,7 @@
 ## Day-5
 
 - Starting new project `Movie App`
+
+## Day-6
+
+- Component Lifecycle Method
