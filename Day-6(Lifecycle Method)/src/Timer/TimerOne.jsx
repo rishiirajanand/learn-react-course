@@ -49,9 +49,13 @@ export default class TimerOne extends Component
         return null;
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, preState, snapShot){
         console.log('TimerOne componentDidUpdate');
         console.log('----------------------------');
+
+        console.log(prevProps, preState, snapShot);
+
+
         if(this.state.timer === 10){
             clearInterval(this.timerId)
         }
