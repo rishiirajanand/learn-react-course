@@ -1,0 +1,14 @@
+.login{
+  width: 400px;
+  border: 2px solid red;
+  text-align: center;
+  margin: 1rem auto auto auto;
+}
+
+.loginBtn,.continueBtn{
+  margin: 1rem 1rem;
+}
+
+input{
+  margin: 0.5rem 0;
+}
