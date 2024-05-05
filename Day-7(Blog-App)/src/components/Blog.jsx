@@ -1,12 +1,27 @@
 import AddBlogs from './AddBlogs';
 import style from './blog.module.css'
-import {useState, useRef, useEffect} from 'react'
+import {useState, useRef, useEffect, useReducer} from 'react'
 
+// const initalState = []
+function blogsReducer(state, action){
+
+    switch(action.type){
+        
+        case "ADD" :
+            return [action.payload, ...state]
+        case "DELETE" :
+            return state.filter((blog, i) => i !== action.payload)
+    }
+        return state;
+}
 
 export default function Blog(){
 
     const [formData, setformData] = useState({title :'', content:''});
-    const [blogs, setBlogs] = useState([]);
+
+    // const [blogs, setBlogs] = useState([]);
+    const [blogs, dispatch] = useReducer(blogsReducer, []);
+
     const titleRef = useRef(null);
 
     useEffect(()=>{
@@ -23,16 +38,20 @@ export default function Blog(){
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        setBlogs([
-            { title:formData.title, content:formData.content },
-            ...blogs
-        ])
+
+        // setBlogs([
+        //     { title:formData.title, content:formData.content },
+        //     ...blogs
+        // ])
+        dispatch({type : "ADD", payload : { title:formData.title, content:formData.content }})
+
         setformData({title :'', content:''})
         titleRef.current.focus();
     }
 
     const handleDelete = (id)=>{
-        setBlogs(blogs.filter((blog, index)=> index !== id))
+        // setBlogs(blogs.filter((blog, index)=> index !== id))
+        dispatch({type : "DELETE", payload : id})
     }
 
     return(
