@@ -1,24 +1,34 @@
 import AddBlogs from './AddBlogs';
 import style from './blog.module.css'
-import {useState} from 'react'
+import {useState, useRef, useEffect} from 'react'
 
 
 export default function Blog(){
 
-    // const [title, setTitle] = useState('');
-    // const [content, setContent] = useState('');
     const [formData, setformData] = useState({title :'', content:''});
-
     const [blogs, setBlogs] = useState([]);
+    const titleRef = useRef(null);
+
+    useEffect(()=>{
+        titleRef.current.focus()
+    },[])
+
+    useEffect(()=>{
+        if(blogs.length>0 && blogs[0].title){
+            document.title = blogs[0].title;
+        }else{
+            document.title = 'No blog here';
+        }
+    },[blogs])
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        
         setBlogs([
             { title:formData.title, content:formData.content },
             ...blogs
         ])
         setformData({title :'', content:''})
+        titleRef.current.focus();
     }
 
     const handleDelete = (id)=>{
@@ -39,14 +49,17 @@ export default function Blog(){
                                 name="title" 
                                 id="title" 
                                 placeholder='Enter blog title'
+                                required
+
                                 value={formData.title}
                                 onChange={(e)=>setformData({title: e.target.value,content: formData.content})}
+                                ref={titleRef}
                             />
                         </p>
                         <hr />
                         <p>
                             <span>Content</span>
-                            <textarea name="content" rows='7' 
+                            <textarea name="content" rows='7' required
                                 value={formData.content}
                                 onChange={(e)=>setformData({title: formData.title,content: e.target.value})}
                             ></textarea>
