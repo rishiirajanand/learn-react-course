@@ -1,6 +1,8 @@
+import { useState } from "react"
 
 export default function Forget({togglePage})
 {
+    const [email, setEmail] = useState('');
 
     return(
         <div className="login">
