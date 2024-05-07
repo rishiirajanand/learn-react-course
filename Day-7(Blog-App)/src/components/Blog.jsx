@@ -12,7 +12,7 @@ function blogsReducer(state, action){
         case "DELETE" :
             return state.filter((blog, i) => i !== action.payload)
     }
-        return state;
+    return state;
 }
 
 export default function Blog(){
