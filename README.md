@@ -41,3 +41,4 @@
 ## Day-6
 
 - Component Lifecycle Method
+- Explore All methods
